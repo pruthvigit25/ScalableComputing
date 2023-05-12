@@ -1,0 +1,5 @@
+Generate : python3 generate.py --width 128 --height 64 --length 6 --symbols symbols.txt --count 98000 --output-dir training_data --output-csv training_data.csv
+
+Train : python3 train.py --width 128 --height 64 --length 6 --symbols symbols.txt --batch-size 980 --epochs 10 --output-model-name test --train-dataset training_data --validate-dataset validation_data --train-csv training_data.csv --validate-csv validation_data.csv
+
+Classify : py classify.py --model-name test --captcha-dir captchas(images) --output stuff.txt --symbols symbols.txt
